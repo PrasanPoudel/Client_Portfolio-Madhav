@@ -34,8 +34,6 @@
 header,section{
   padding: 0 7.5%;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 section{
   padding: 7.5%;
@@ -118,7 +116,6 @@ header{
 .hero{
 display: grid;
 grid-template-columns: 60% 40%;
-height: 75vh;
 background-image: url(./img/background.png);
 background-repeat: no-repeat;
 background-size: cover;
@@ -127,7 +124,7 @@ overflow: hidden;
 .hero .heroText{
   display: flex;
   flex-direction: column;
-  padding-top: 150px;
+  padding-top: 100px;
 }
 .greet{
   font-family: "Jost", sans-serif;
@@ -187,9 +184,11 @@ overflow: hidden;
   font-weight: 500;
   text-decoration: none;
 }
-.mySocials ul li{
+.mySocials ul{
   display: flex;
-  gap: 25px;
+  gap: 5px;
+  flex-wrap: wrap;
+
 }
 .mySocials ul li a i{
   color: rgba(50, 45, 175, 1);
@@ -231,11 +230,11 @@ overflow: hidden;
   }
 @media screen and (max-width:1200px){
   .hero{
-  display: flex;
-  flex-direction: column;
-  gap: 250px;
-  height: 200vh;
-  padding-bottom: 50px;
+  grid-template-columns: 1fr;
+  gap: 500px;
+  }
+  .heroImage{
+    bottom: 250px;
   }
   .navLinks{
     padding: auto;
@@ -266,7 +265,6 @@ overflow: hidden;
   }
   header{
     background-image: url(./img/headerBackground.png);
-    padding: 2%;
   }
 }
 
@@ -395,6 +393,15 @@ color: #fff;
 }
 
 @media screen and (max-width:1200px) {
+  .me{
+    flex-direction: column;
+    gap: 50px;
+    height: auto;
+  }
+  .me img{
+    width: 100%;
+    z-index: 5;
+  }
   .about{
     display: flex;
     flex-direction: column;
@@ -670,6 +677,8 @@ padding-left: 25px;
   background-image: url('./img/background.png');
   background-repeat: no-repeat;
   background-size: cover;
+  justify-content: center;
+  align-items: center;
 }
 .clientHeading{
   display: flex;
@@ -718,7 +727,6 @@ padding-left: 25px;
     font-size: 3.3rem;
   }
 }
-
 
 /* footer section */
 footer{
